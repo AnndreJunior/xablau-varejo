@@ -1,7 +1,7 @@
 /* || Variables */
 
 :root {
-  --layout-margin-x: 10px;
+  --layout-margin-x: 16px;
   --main-black: #000;
   --main-gold: #ffa31a;
   --default-transform-time: 0.3s;
@@ -30,7 +30,7 @@ body {
 /* || Header */
 
 .header {
-  margin: 4px var(--layout-margin-x);
+  margin: 14px var(--layout-margin-x);
 }
 
 .header__container {
@@ -130,6 +130,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    margin: 20px 42px;
+  }
+
   .header__mobile-nav {
     display: none;
   }
