@@ -1,0 +1,138 @@
+/* || Variables */
+
+:root {
+  --layout-margin-x: 10px;
+  --main-black: #000;
+  --main-gold: #ffa31a;
+  --default-transform: 0.3s;
+}
+
+/* ... */
+
+/* || Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ... */
+
+/* || Default style */
+
+body {
+  font-family: sans-serif;
+}
+
+/* ... */
+
+/* || Header */
+
+.header {
+  margin: 4px var(--layout-margin-x);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title > a {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.header__hamburger-icon {
+  cursor: pointer;
+  display: block;
+}
+
+.header__hamburger-bar1,
+.header__hamburger-bar2,
+.header__hamburger-bar3 {
+  width: 35px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: var(--main-black);
+  transition: 0.4s;
+}
+
+.open .header__hamburger-bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .header__hamburger-bar2 {
+  opacity: 0;
+}
+
+.open .header__hamburger-bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  list-style-type: none;
+}
+
+.open .header__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__mobile-menu > li {
+  margin-bottom: 10px;
+}
+.header__mobile-menu > li:hover,
+.header__default-menu > li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.header__mobile-menu > li > a {
+  text-decoration: none;
+  color: var(--main-black);
+}
+
+.header__default-nav {
+  display: none;
+}
+
+.header__default-menu {
+  display: flex;
+  gap: 28px;
+  list-style-type: none;
+}
+
+.header__menu-link {
+  text-decoration: none;
+  color: var(--main-black);
+}
+.header__menu-link:hover {
+  transition: var(--default-transform);
+  color: var(--main-gold);
+}
+
+.header__menu-link--active {
+  color: var(--main-gold);
+}
+
+@media screen and (min-width: 768px) {
+  .header__mobile-nav {
+    display: none;
+  }
+
+  .header__default-nav {
+    display: block;
+  }
+}
+
+/* ... */
