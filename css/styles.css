@@ -4,7 +4,7 @@
   --layout-margin-x: 10px;
   --main-black: #000;
   --main-gold: #ffa31a;
-  --default-transform: 0.3s;
+  --default-transform-time: 0.3s;
 }
 
 /* ... */
@@ -106,6 +106,10 @@ body {
   display: none;
 }
 
+.header__default-menu > li {
+  transition: transform var(--default-transform-time) ease;
+}
+
 .header__default-menu {
   display: flex;
   gap: 28px;
@@ -117,7 +121,7 @@ body {
   color: var(--main-black);
 }
 .header__menu-link:hover {
-  transition: var(--default-transform);
+  transition: var(--default-transform-time);
   color: var(--main-gold);
 }
 
